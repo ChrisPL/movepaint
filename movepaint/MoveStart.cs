@@ -1,6 +1,8 @@
 using System;
 using io.thp.psmove;
 using System.Threading;
+using GtkWin;
+using Gtk;
 
 namespace movepaint
 {
@@ -50,19 +52,35 @@ namespace movepaint
 		int lr, lg, lb;
 		bool brk = false;
 
+		Thread windowThread;
+
 		public MoveStart ()
 		{
-
+			Application.Init();
+			win = new MainWindow();
+			win.Show();
+			moveThread = new Thread(MoveLoop);
+			moveThread.Start();
+			Console.Beep();
+			Application.Run();
+//			windowThread = new Thread(Application.Run);
+//			windowThread.Start();
+			moveThread.Join();
 		}
+
+		MainWindow win;
+		Thread moveThread;
 
 		public static void Main ()
 		{
+			new MoveStart();
 		}
 
 		public void MoveLoop ()
 		{
 			while (true) {
 				UpdateMove ();
+				win.Paint(Lr,Lg,Lb,trigger,0,0);
 				if (brk)
 					break;
 			}
@@ -85,11 +103,10 @@ namespace movepaint
 				move.set_leds (lr, lg, lb);
 				move.set_rumble (trigger);
 				move.update_leds ();					
-				Console.WriteLine (lr + " " + lg + " " + lb);
+//				Console.WriteLine (lr + " " + lg + " " + lb);
 
-						
 
-				brk = move.get_buttons () == (int)Button.Btn_MOVE;
+				brk = move.get_buttons () == (int)io.thp.psmove.Button.Btn_MOVE;
 				if (brk)
 					break;
 			}

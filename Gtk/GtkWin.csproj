@@ -77,10 +77,4 @@
       <DeployService-UseProjectRelativePath>true</DeployService-UseProjectRelativePath>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\movepaint\movepaint.csproj">
-      <Project>{BD56064D-6702-4D4F-88E2-E2941B0A95B1}</Project>
-      <Name>movepaint</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

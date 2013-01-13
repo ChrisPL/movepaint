@@ -21,6 +21,6 @@ Global
 		{BD56064D-6702-4D4F-88E2-E2941B0A95B1}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Gtk\GtkWin.csproj
+		StartupItem = movepaint\movepaint.csproj
 	EndGlobalSection
 EndGlobal

@@ -5,19 +5,15 @@ namespace GtkWin
 {
 	public class GtkMainClass
 	{
-		public static MainWindow Win {
-			get {
-				return win;
-			}
+		public static void Main()
+		{
 		}
 
-		private static MainWindow win;
 
-		public static void Main ()
+		public static void Start (System.Object win)
 		{
 			Application.Init ();
-			win = new MainWindow ();
-			win.Show ();
+			((MainWindow)win).Show ();
 			Application.Run ();
 		}
 

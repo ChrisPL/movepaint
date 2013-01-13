@@ -2,20 +2,19 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="movepaint/MoveStart.cs">
     <Files>
-      <File FileName="movepaint/MoveStart.cs" Line="70" Column="3" />
-      <File FileName="Gtk/MainWindow.cs" Line="87" Column="19" />
-      <File FileName="Gtk/GtkMain.cs" Line="21" Column="1" />
-      <File FileName="movepaint/movelib/PSMoveTracker.cs" Line="1" Column="1" />
+      <File FileName="movepaint/MoveStart.cs" Line="65" Column="4" />
+      <File FileName="Gtk/MainWindow.cs" Line="59" Column="35" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Option id="ShowAllFiles" value="True" />
           <Node name="GtkWin" expanded="True">
+            <Node name="References" expanded="True" />
             <Node name="UserInterface" expanded="True" />
           </Node>
           <Node name="movepaint" expanded="True">
-            <Node name="examples" expanded="True" />
+            <Node name="References" expanded="True" />
             <Node name="movelib" expanded="True" />
             <Node name="MoveStart.cs" selected="True" />
           </Node>
