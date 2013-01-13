@@ -61,7 +61,6 @@ namespace movepaint
 			win.Show();
 			moveThread = new Thread(MoveLoop);
 			moveThread.Start();
-			Console.Beep();
 			Application.Run();
 //			windowThread = new Thread(Application.Run);
 //			windowThread.Start();
@@ -78,8 +77,11 @@ namespace movepaint
 
 		public void MoveLoop ()
 		{
+			
+			//Random rnd = new Random();
 			while (true) {
 				UpdateMove ();
+//				TestVariables(rnd);
 				win.Paint(Lr,Lg,Lb,trigger,0,0);
 				if (brk)
 					break;
@@ -87,6 +89,14 @@ namespace movepaint
 		}
 
 		private ReaderWriterLock rwLock = new ReaderWriterLock();
+
+		private void TestVariables(Random rnd)
+		{
+			lr = rnd.Next()%256;
+			lg = rnd.Next()%256;
+			lb = rnd.Next()%256;
+			trigger = rnd.Next()%256;
+		}
 
 		public void UpdateMove ()
 		{
