@@ -70,6 +70,10 @@
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="gtk-gui\MainWindow.cs" />
     <Compile Include="GtkMain.cs" />
+    <Compile Include="Camera.cs" />
+    <Compile Include="gtk-gui\Gtk.Camera.cs" />
+    <Compile Include="ColorPicker.cs" />
+    <Compile Include="gtk-gui\Gtk.ColorPicker.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

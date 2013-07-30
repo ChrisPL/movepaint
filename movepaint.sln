@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "movepaint", "movepaint\move
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GtkWin", "Gtk\GtkWin.csproj", "{5AB5CF94-F488-483B-A175-C55C8DEFD7A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaoOpenGL", "TaoOpenGL\TaoOpenGL.csproj", "{CBA344B5-483B-41E5-9957-70977A86162A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -19,8 +21,12 @@ Global
 		{BD56064D-6702-4D4F-88E2-E2941B0A95B1}.Debug|x86.Build.0 = Debug|x86
 		{BD56064D-6702-4D4F-88E2-E2941B0A95B1}.Release|x86.ActiveCfg = Release|x86
 		{BD56064D-6702-4D4F-88E2-E2941B0A95B1}.Release|x86.Build.0 = Release|x86
+		{CBA344B5-483B-41E5-9957-70977A86162A}.Debug|x86.ActiveCfg = Debug|x86
+		{CBA344B5-483B-41E5-9957-70977A86162A}.Debug|x86.Build.0 = Debug|x86
+		{CBA344B5-483B-41E5-9957-70977A86162A}.Release|x86.ActiveCfg = Release|x86
+		{CBA344B5-483B-41E5-9957-70977A86162A}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = movepaint\movepaint.csproj
+		StartupItem = TaoOpenGL\TaoOpenGL.csproj
 	EndGlobalSection
 EndGlobal

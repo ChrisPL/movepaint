@@ -32,10 +32,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="gtk-dotnet, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
-      <Private>False</Private>
-      <Package>gtk-dotnet-2.0</Package>
-    </Reference>
     <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <Private>False</Private>
       <Package>gtk-sharp-2.0</Package>
@@ -63,6 +59,10 @@
     <Compile Include="movelib\psmoveapi_csharp.cs" />
     <Compile Include="movelib\psmoveapi_csharpPINVOKE.cs" />
     <Compile Include="MoveStart.cs" />
+    <Compile Include="MoveTracker.cs" />
+    <Compile Include="movelib\PSMove_Version.cs" />
+    <Compile Include="movelib\PSMoveFusion.cs" />
+    <Compile Include="movelib\PSMoveMatrix4x4.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="movelib\bindings\swig\psmoveCSHARP_wrap.c" />
+    <None Include="movelib\psmoveapi.pc" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Gtk\GtkWin.csproj">

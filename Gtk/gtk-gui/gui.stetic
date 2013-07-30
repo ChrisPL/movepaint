@@ -8,15 +8,56 @@
     <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <widget-library name="../bin/Debug/Gtk.exe" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="MainWindow" design-size="837 513">
+  <widget class="Gtk.Window" id="MainWindow" design-size="702 513">
     <property name="MemberName" />
     <property name="Events">ExposureMask</property>
     <property name="Title" translatable="yes">MainWindow</property>
     <property name="WindowPosition">Center</property>
+    <property name="BorderWidth">9</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
     <child>
-      <widget class="Gtk.DrawingArea" id="drawingarea1">
+      <widget class="Gtk.HPaned" id="hpaned1">
         <property name="MemberName" />
+        <property name="CanFocus">True</property>
+        <property name="Position">552</property>
+        <child>
+          <widget class="Gtk.DrawingArea" id="drawingarea1">
+            <property name="MemberName" />
+          </widget>
+          <packing>
+            <property name="Resize">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.ColorButton" id="colorbutton1">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Events">ButtonMotionMask, ButtonPressMask, ButtonReleaseMask</property>
+            <property name="Alpha">-1</property>
+          </widget>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="Gtk.Window" id="Gtk.Camera" design-size="400 300">
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">Camera</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <child>
+      <widget class="Gtk.Image" id="cameraImage">
+        <property name="MemberName" />
+      </widget>
+    </child>
+  </widget>
+  <widget class="Gtk.Window" id="Gtk.ColorPicker" design-size="521 300">
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">ColorPicker</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <child>
+      <widget class="Gtk.ColorSelection" id="colorselection1">
+        <property name="MemberName" />
+        <property name="HasPalette">True</property>
+        <property name="HasOpacityControl">True</property>
       </widget>
     </child>
   </widget>

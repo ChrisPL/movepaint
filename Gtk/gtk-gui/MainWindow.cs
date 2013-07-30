@@ -3,7 +3,9 @@
 
 public partial class MainWindow
 {
+	private global::Gtk.HPaned hpaned1;
 	private global::Gtk.DrawingArea drawingarea1;
+	private global::Gtk.ColorButton colorbutton1;
 	
 	protected virtual void Build ()
 	{
@@ -13,14 +15,29 @@ public partial class MainWindow
 		this.Name = "MainWindow";
 		this.Title = global::Mono.Unix.Catalog.GetString ("MainWindow");
 		this.WindowPosition = ((global::Gtk.WindowPosition)(1));
+		this.BorderWidth = ((uint)(9));
 		// Container child MainWindow.Gtk.Container+ContainerChild
+		this.hpaned1 = new global::Gtk.HPaned ();
+		this.hpaned1.CanFocus = true;
+		this.hpaned1.Name = "hpaned1";
+		this.hpaned1.Position = 552;
+		// Container child hpaned1.Gtk.Paned+PanedChild
 		this.drawingarea1 = new global::Gtk.DrawingArea ();
 		this.drawingarea1.Name = "drawingarea1";
-		this.Add (this.drawingarea1);
+		this.hpaned1.Add (this.drawingarea1);
+		global::Gtk.Paned.PanedChild w1 = ((global::Gtk.Paned.PanedChild)(this.hpaned1 [this.drawingarea1]));
+		w1.Resize = false;
+		// Container child hpaned1.Gtk.Paned+PanedChild
+		this.colorbutton1 = new global::Gtk.ColorButton ();
+		this.colorbutton1.CanFocus = true;
+		this.colorbutton1.Events = ((global::Gdk.EventMask)(784));
+		this.colorbutton1.Name = "colorbutton1";
+		this.hpaned1.Add (this.colorbutton1);
+		this.Add (this.hpaned1);
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();
 		}
-		this.DefaultWidth = 837;
+		this.DefaultWidth = 702;
 		this.DefaultHeight = 513;
 		this.Show ();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
